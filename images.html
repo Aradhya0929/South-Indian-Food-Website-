@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>South Indian Food Images</title>
+  <link rel="stylesheet" href="south.css" >
+</head>
+<body>
+
+  <header>
+    <h1>South Indian Food Gallery</h1>
+  </header>
+
+  <!-- Dosa Section -->
+  <section class="gallery-section">
+    <h2>Dosa Varieties</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="images/plain dosaa.jfif" alt="Plain Dosa" onclick="openImage(this)">
+        <p>Plain Dosa</p>
+      </div>
+      <div class="card">
+        <img src="images/masala dosaa.jfif" alt="Masala Dosa" onclick="openImage(this)">
+        <p>Masala Dosa</p>
+      </div>
+      <div class="card">
+        <img src="images/onion masala dosa.jfif" alt="Onion Masala Dosa" onclick="openImage(this)">
+        <p>Onion Masala Dosa</p>
+      </div>
+       <div class="card">
+        <img src="images/onion paneer dosa.jfif" alt="Onion Paneer Masala Dosa" onclick="openImage(this)">
+        <p>Onion Paneer Masala Dosa</p>
+      </div>
+       <div class="card">
+        <img src="images/paneer butter dosa.jfif" alt="Paneer Dosa" onclick="openImage(this)">
+        <p>Paneer Dosa</p>
+      </div>
+       <div class="card">
+        <img src="images/cheesedosa.webp" alt="Onion Cheese Dosa" onclick="openImage(this)">
+        <p>Onion Cheese Dosa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Idli Section -->
+  <section class="gallery-section">
+    <h2>Idli Varieties</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="images/rice idle.jfif" alt="Rice Idli" onclick="openImage(this)">
+        <p>Rice Idli</p>
+      </div>
+      <div class="card">
+        <img src="images/fried idlii.jfif" alt="Fried Idli" onclick="openImage(this)">
+        <p>Fried Idli</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Uttapam Section -->
+  <section class="gallery-section">
+    <h2>Uttapam Varieties</h2>
+    <div class="gallery">
+      <div class="card">
+        <img src="images/tomato uttapa.jfif" alt="Tomato Butter Uttapam" onclick="openImage(this)">
+        <p>Tomato Butter Uttapam</p>
+      </div>
+      <div class="card">
+        <img src="images/onion butter uttapam.jfif" alt="Onion Butter Uttapam" onclick="openImage(this)">
+        <p>Onion Butter Uttapam</p>
+      </div>
+      <div class="card">
+        <img src="images/onion tomato uttapam.jfif" alt="Onion Tomato Uttapam" onclick="openImage(this)">
+        <p>Onion Tomato Uttapam`</p>
+      </div>
+      <div class="card">
+        <img src="images/onion cheese uttapam.jfif" alt="Onion Paneer Uttapam" onclick="openImage(this)">
+        <p>Onion Paneer Uttapam</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 South Indian Dosa Corner</p>
+  </footer>
+
+  <!-- ✅ Modal for Full Image View -->
+  <div id="imageModal" class="modal" onclick="closeImage()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="popupImg">
+  </div>
+
+  <!-- ✅ JS to Handle Image Click and Close -->
+  <script>
+    function openImage(img) {
+      const modal = document.getElementById("imageModal");
+      const popupImg = document.getElementById("popupImg");
+      popupImg.src = img.src;
+      modal.style.display = "block";
+    }
+
+    function closeImage() {
+      document.getElementById("imageModal").style.display = "none";
+    }
+  </script>
+
+<!-- Sticky Phone and WhatsApp Icons -->
+<a href="tel:+917055907981" class="sticky-icon-left" title="Call Us">
+  <img src="images/phonelogo.jpg" alt="Phone" />
+</a>
+
+<a href="https://wa.me/7055907981" class="sticky-icon-right" title="Chat on WhatsApp" target="_blank">
+  <img src="images/whatsapp logo.webp" alt="WhatsApp" />
+</a>
+
+</body>
+</html>
